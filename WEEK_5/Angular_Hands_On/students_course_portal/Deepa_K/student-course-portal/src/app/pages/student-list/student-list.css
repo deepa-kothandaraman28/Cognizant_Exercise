@@ -1,0 +1,13 @@
+table{
+    border-collapse: collapse;
+    width: 500px;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background-color:lightgray;
+}

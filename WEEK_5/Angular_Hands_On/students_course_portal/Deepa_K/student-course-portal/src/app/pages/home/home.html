@@ -1,0 +1,25 @@
+<h2>{{ studentName | uppercase }}</h2>
+
+<hr>
+
+<h3 *ngIf="isLoggedIn">
+    Welcome Student
+</h3>
+
+<hr>
+
+<h3>Courses</h3>
+
+<ul>
+    <li *ngFor="let c of courses">
+        {{ c }}
+    </li>
+</ul>
+
+<hr>
+
+<p>Date : {{ today | date:'dd/MM/yyyy' }}</p>
+
+<p>Fee : {{ fee | currency:'INR' }}</p>
+
+<p>Attendance : {{ attendance | percent }}</p>

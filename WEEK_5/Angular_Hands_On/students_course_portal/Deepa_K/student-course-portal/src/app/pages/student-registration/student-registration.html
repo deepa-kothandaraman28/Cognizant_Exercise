@@ -1,0 +1,74 @@
+<h2>Student Registration</h2>
+
+<form #f="ngForm" (ngSubmit)="submit()">
+
+  <div>
+    <label for="name">Name</label><br>
+
+    <input
+      id="name"
+      type="text"
+      name="name"
+      placeholder="Enter your name"
+      required
+      [(ngModel)]="student.name"
+      #name="ngModel">
+
+    <div *ngIf="name.invalid && name.touched" style="color:red;">
+      Name is required
+    </div>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="email">Email</label><br>
+
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="Enter your email"
+      required
+      email
+      [(ngModel)]="student.email"
+      #email="ngModel">
+
+    <div *ngIf="email.invalid && email.touched" style="color:red;">
+      Valid email is required
+    </div>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="course">Course</label><br>
+
+    <input
+      id="course"
+      type="text"
+      name="course"
+      placeholder="Enter course"
+      [(ngModel)]="student.course">
+  </div>
+
+  <br>
+
+  <div>
+    <label for="phone">Phone</label><br>
+
+    <input
+      id="phone"
+      type="tel"
+      name="phone"
+      placeholder="Enter phone number"
+      [(ngModel)]="student.phone">
+  </div>
+
+  <br>
+
+  <button type="submit" [disabled]="f.invalid">
+    Register
+  </button>
+
+</form>
