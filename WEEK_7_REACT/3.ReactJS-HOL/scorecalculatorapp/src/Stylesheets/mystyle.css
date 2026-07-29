@@ -1,0 +1,16 @@
+.box {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: lightblue;
+}
+
+h2 {
+    color: darkblue;
+}
+
+p {
+    font-size: 18px;
+}
